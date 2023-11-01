@@ -6,7 +6,8 @@
       <button @click="nameChange">change my name </button>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :myName='name'></app-user-detail>
+<!--                <app-user-detail :myName='name' v-on: nameWasReset ></app-user-detail>-->
+                <app-user-detail :myName='name' @nameWasReset="name = $event"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>

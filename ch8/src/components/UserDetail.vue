@@ -3,6 +3,7 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p> User name : {{ switch_name() }}</p>
+        <button @click="resetName">Reset Name</button>
     </div>
 </template>
 
@@ -17,6 +18,10 @@ export default {
   methods: {
     switch_name() {
       return this.myName.split("").reverse().join("");
+    },
+    resetName(){
+      this.myName = "ABE",
+      this.$emit('nameWasReset',this.myName)
     }
   }
 }
