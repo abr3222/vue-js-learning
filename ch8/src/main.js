@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// Step 1: Event Bus in the main.js
-export const eventBus = new Vue()
+export const eventBus = new Vue({
+  methods: {
+    changeAge(age) {
+      this.$emit('ageWasEdited', age);
+    }
+  }
+});
 
 new Vue({
   el: '#app',
