@@ -6,7 +6,7 @@
       <button @click="nameChange">change my name </button>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail></app-user-detail>
+                <app-user-detail :name='name'></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -22,7 +22,7 @@
     export default {
       data: function (){
         return {
-          change: 'ABR'
+          name: 'ABR'
         };
       },
         components: {
