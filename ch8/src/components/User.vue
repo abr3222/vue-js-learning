@@ -10,7 +10,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
 <!--                <app-user-detail :myName='name' v-on: nameWasReset ></app-user-detail>-->
-                <app-user-detail :myName='name' @nameWasReset="name = $event"></app-user-detail>
+                <app-user-detail :myName='name' @nameWasReset="name = $event"
+
+                :resetFun="resetName"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -36,7 +38,11 @@
       methods:{
         nameChange(){
           this.name = "Max"
+        },
+        resetName(){
+          this.name = "ABC"
         }
+
       }
     }
 </script>
