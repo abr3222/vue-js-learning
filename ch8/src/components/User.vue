@@ -6,6 +6,7 @@
         <hr>
       <button @click="nameChange">change my name </button>
        <p>my Name is {{name}}</p>
+       <p>my Age is {{age}}</p>
 
         <div class="row">
             <div class="col-xs-12 col-sm-6">

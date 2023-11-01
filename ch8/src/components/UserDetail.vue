@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { eventBus } from '../main';
 export default {
   props: {
     myName: {
@@ -27,6 +28,11 @@ export default {
       this.myName = "ABE",
       this.$emit('nameWasReset',this.myName)
     }
+  },
+  created() { // Step 3: Use Lifecylce hook to Update the infomratin directly without parrent
+    eventBus.$on('ageWasEdited', (age) => {
+      this.userAge = age;
+    });
   }
 }
 </script>
