@@ -2,8 +2,11 @@
     <div class="component">
         <h1>The User Component</h1>
         <p>I'm an awesome User!</p>
+
         <hr>
       <button @click="nameChange">change my name </button>
+       <p>my Name is {{name}}</p>
+
         <div class="row">
             <div class="col-xs-12 col-sm-6">
 <!--                <app-user-detail :myName='name' v-on: nameWasReset ></app-user-detail>-->
