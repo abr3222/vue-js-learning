@@ -10,7 +10,8 @@
                         <input
                                 type="text"
                                 id="email"
-                                class="form-control">
+                                class="form-control"
+                                v-model:is="email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
@@ -102,6 +103,7 @@
                     </div>
                     <div class="panel-body">
                         <p>Mail:</p>
+                        {{email}}
                         <p>Password:</p>
                         <p>Age:</p>
                         <p>Message: </p>
@@ -121,6 +123,11 @@
 
 <script>
     export default {
+      data () {
+          return {
+          email: ''
+        }
+      }
     }
 </script>
 
